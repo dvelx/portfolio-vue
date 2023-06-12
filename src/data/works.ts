@@ -1,32 +1,53 @@
-export default [
+import moire from '../assets/images/moire.png'
+import portfolio from '../assets/images/portfolio.png'
+import email from '../assets/images/adaptive-mail.png'
+import crm from '../assets/images/crm-main.png'
+
+interface IWorks {
+  id: number,
+  src: string,
+  title: string,
+  text: string,
+  github: string,
+  ghPages?: string
+}
+
+
+const works:IWorks[] = [
   {
     id: 1,
-    src: '../../src/assets/images/moire.png',
+    src: moire,
     title: 'MOIRE STORE',
     text: 'Мой первый проект на Vue',
-    url: 'https://github.com/dvelx/moire-store'
+    github: 'https://github.com/dvelx/moire-store',
+    ghPages: 'https://dvelx.github.io/moire-store/#/'
   },
   {
     id: 2,
-    src: '../../src/assets/images/portfolio.png',
+    src: portfolio,
     title: '@dvelx portfolio',
     text: 'Проект моего портфолио на Vue3 + Vite + TS',
-    url: 'https://github.com/dvelx/site-portfolio'
+    github: 'https://github.com/dvelx/site-portfolio',
+    ghPages: 'https://dvelx.github.io/portfolio-vue/'
   },
   {
     id: 3,
-    src: '../../src/assets/images/adaptive-mail.png',
+    src: email,
     title: 'Adaptive Email',
     text: 'Адаптивное email письмо',
-    url: 'https://github.com/dvelx/mail-blanchard'
+    github: 'https://github.com/dvelx/mail-blanchard',
+    ghPages: ''
   },
   {
     id: 4,
-    src: '../../src/assets/images/crm-main.png',
+    src: crm,
     title: 'CRM System',
     text: 'CRM система учета клиентов',
-    url: 'https://github.com/dvelx/Mini-CRM'
+    github: 'https://github.com/dvelx/Mini-CRM',
+    ghPages: ''
   },
 ]
+
+export default works
 
 

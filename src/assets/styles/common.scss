@@ -17,6 +17,7 @@ html {
   height: 100%;
 }
 body {
+  background-color: $bg_color;
   fill: currentColor;
 
 }
@@ -79,4 +80,19 @@ button {
   border: 1px solid $primary;
   color: $white;
   font-family: $font-family;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 991px;
+    padding: 0 .5em;
+  }
+  body {
+    max-height: 100vh;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 766px;
+  }
 }

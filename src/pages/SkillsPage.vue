@@ -71,4 +71,20 @@ import skills from "@/data/skills";
     }
   }
 }
+@media (max-width: 991px) {
+  .skills {
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .skills {
+
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
 </style>

@@ -151,4 +151,20 @@
   }
 }
 
+@media (max-width: 991px) {
+}
+@media (max-width: 768px) {
+  .contacts {
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__left {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
 </style>

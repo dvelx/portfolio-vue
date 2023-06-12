@@ -12,12 +12,17 @@
               {{ work.title }}
             </h3>
             <span class="works__item-divider"></span>
-            <a :href="work.url" class="works__item-link" target="_blank"></a>
+            <a :href="work.github" class="works__item-link" target="_blank"></a>
               <img class="works__item-img" :src="work.src" alt="moire">
             <span class="works__item-divider"></span>
             <p class="works__item-description">
               {{ work.text }}
             </p>
+            <span class="works__item-divider"></span>
+            <div class="works__item-bottom">
+              <a class="works__item-btn btn">GitHub</a>
+              <a v-if="work.ghPages" class="works__item-btn btn">GHPages</a>
+            </div>
           </div>
         </div>
       </div>
@@ -26,10 +31,12 @@
 </template>
 
 <script setup lang="ts">
+import moire from '../assets/images/moire.png'
 import works from "@/data/works";
 </script>
 
 <style scoped lang="scss">
+
 @import "../assets/styles/main";
 .works {
   &__container {
@@ -79,13 +86,48 @@ import works from "@/data/works";
   &__item-description {
     padding: 0.5em;
   }
-  &__item-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  //&__item-link::before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 100%;
+  //}
+  &__item-bottom {
+    z-index: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item-btn {
+    transition: background-color .3s ease-in-out;
+  }
+  &__item-btn:hover {
+    background-color: $bg_btn_hover;
+  }
+}
+
+@media (max-width: 991px) {
+  .works {
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      overflow-y: auto;
+      overflow-scrolling: touch;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .works {
+
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__container {
+      width: 100%;
+      padding: 4em 20px;
+    }
   }
 }
 </style>

@@ -70,7 +70,7 @@
       </div>
       <div class="footer__bottom">
         <p class="footer__bottom-copyright">
-          © Copyright 2023. Made by dvelx
+          © Copyright {{ currentDate }}. Made by dvelx
         </p>
       </div>
     </div>
@@ -79,6 +79,12 @@
 
 <script setup lang="ts">
 
+import {computed} from "vue";
+
+const date = new Date()
+const currentDate = computed(() => {
+  return date.getFullYear()
+})
 </script>
 
 <style scoped lang="scss">

@@ -1,32 +1,48 @@
 <template>
-
-    <main>
-      <section class="hero">
-        <div class="container">
-          <div class="hero__container">
-            <div class="hero__left">
-              <h1 class="hero__left-title">
-                Hello! My name is
-                <span class="hero__left-span">Andrei</span> and I`m a
-                <span class="hero__left-span">front-end developer</span>
-              </h1>
-              <p class="hero__left-description">
-                He crafts responsive websites where technologies meet creativity
-              </p>
-              <button class="hero__left-btn btn">Contact me !!</button>
-            </div>
-            <div class="hero__right">
-
-            </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__container">
+          <div class="hero__left">
+            <h1 class="hero__left-title">
+              Hello! My name is
+              <span class="hero__left-span">Andrei</span> and I`m a
+              <span class="hero__left-span">front-end developer</span>
+            </h1>
+            <p class="hero__left-description">
+              He crafts responsive websites where technologies meet creativity
+            </p>
+            <button class="hero__left-btn btn" @click.prevent="openBtn">Contact me !!</button>
+            <BaseModal v-model:open="open">
+              <form action="#" method="post" class="modal__form">
+                <BaseFormText title="Name" placeholder="You name" />
+                <BaseFormText title="Email" placeholder="You email" />
+                <BaseFormTextarea title="Enter you message" placeholder="Enter you message" />
+                <button class="modal-btn btn">Send</button>
+              </form>
+            </BaseModal>
+            <div id="contact-modal"></div>
           </div>
+          <div class="hero__right"></div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
 </template>
 
 <script setup lang="ts">
 
+import BaseModal from "@/components/BaseModal.vue";
+import { ref} from "vue";
+import BaseFormText from "@/components/BaseFormText.vue";
+import BaseFormTextarea from "@/components/BaseFormTextarea.vue";
+
+const open = ref(false)
+
+const openBtn = () => {
+  open.value = true
+}
 </script>
 
 <style scoped lang="scss">
@@ -37,6 +53,9 @@
   color: #C778DD;
   right: 50px;
   transform: rotate(30deg);
+}
+.modal__form {
+  position: relative;
 }
 
 
@@ -89,5 +108,31 @@
     opacity: 0.5;
     transform: rotate(-20deg)
   }
+}
+.modal-btn {
+  transition: background-color .3s ease-in-out;
+}
+.modal-btn:hover {
+  background-color: $bg_btn_hover;
+}
+@media (max-width: 991px) {
+  .hero {
+
+    &__left {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+
 }
 </style>
