@@ -90,7 +90,8 @@ const currentDate = computed(() => {
 <style scoped lang="scss">
 @import "../assets/styles/main";
 .footer {
-  padding-top: 2em;
+  width: 100vw;
+  padding: 2em 10px 0 10px;
   border-top: 1px solid $gray;
   &__wrapper {
     display: flex;

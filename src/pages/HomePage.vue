@@ -133,6 +133,16 @@ const openBtn = () => {
   }
 }
 @media (max-width: 768px) {
+  .hero {
 
+
+    &__left-title {
+      font-size: 1.5em;
+    }
+    &__left-btn.btn {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+  }
 }
 </style>

@@ -47,7 +47,7 @@ import works from "@/data/works";
     align-items: center;
     font-size: 2em;
     font-weight: $font_medium;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
   &-span {
     color: $primary;
@@ -63,6 +63,7 @@ import works from "@/data/works";
     display: grid;
     gap: 2em;
     grid-template-columns: repeat(4, 1fr);
+
 
     &-item {
 
@@ -126,7 +127,7 @@ import works from "@/data/works";
     }
     &__container {
       width: 100%;
-      padding: 4em 20px;
+      padding: 4em 10px;
     }
   }
 }

@@ -43,7 +43,7 @@ const doClose = () => {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .15;
+    opacity: .55;
     background-color: #000000;
   }
   &__contact {
@@ -66,7 +66,7 @@ const doClose = () => {
     padding: 50px;
     color: $white;
     border: 1px solid $gray;
-    background-color: rgba(40,44,51,.75)
+    background-color: rgba(40,44,51,.9)
   }
   &__close {
     position: absolute;

@@ -44,15 +44,15 @@
       <nav class="nav__mobile">
         <ul class="nav__list">
           <li class="nav__item">
-            <RouterLink to="/" href="#" class="nav__item-link home-icon">
-            </RouterLink>
-          </li>
-          <li class="nav__item">
             <RouterLink to="/skills/" class="nav__item-link skill-icon">
             </RouterLink>
           </li>
           <li class="nav__item">
             <RouterLink to="/works/" class="nav__item-link works-icon">
+            </RouterLink>
+          </li>
+          <li class="nav__item">
+            <RouterLink to="/" href="#" class="nav__item-link home-icon">
             </RouterLink>
           </li>
           <li class="nav__item">
@@ -78,6 +78,8 @@
 @import "../assets/styles/main";
 
 .header {
+  width: 100vw;
+  padding: 10px 10px 0 10px;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -145,54 +147,62 @@
 }
 @media (max-width: 767px) {
   .header {
+    z-index: 10;
     &__nav {
       display: none;
     }
     &__container {
       max-width: 100vw;
       padding: 0;
-      box-shadow: 0 10px 5px 2px rgba(59,63,71, .5);
     }
   }
   .nav__mobile {
-    position: sticky;
+    position: fixed;
+    padding: 10px 20px 10px 20px;
     display: flex;
-    height: 60px;
-    padding-top: 10px;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 100vw;
     flex-direction: row;
-    background-color: rgba(59,63,71, .5);
+    background-color: rgba(27, 30, 36, 1);
+    box-shadow: 0 5px 2px 2px rgba(27, 30, 36, 1);
   }
   .home-icon {
-    width: 50px;
+    width: 30px;
     background-image: url("../assets/images/noun-home-2472593.svg");
     background-repeat: no-repeat;
+    background-position: center;
   }
   .skill-icon {
-    width: 50px;
+    width: 30px;
     background-repeat: no-repeat;
     background-image: url("../assets/images/noun-skill-5613365.svg");
+    background-position: center;
   }
   .works-icon {
-    width: 50px;
+    width: 30px;
     background-repeat: no-repeat;
     background-image: url("../assets/images/noun-rotation-works-2856402.svg");
+    background-position: center;
   }
   .about-icon {
-    width: 50px;
+    width: 30px;
     background-repeat: no-repeat;
     background-image: url("../assets/images/noun-about-me-5241214.svg");
+    background-position: center;
   }
   .contact-icon {
-    width: 50px;
+    width: 30px;
     background-repeat: no-repeat;
     background-image: url("../assets/images/noun-contacts-4195379.svg");
+    background-position: center;
   }
   .nav__item-link {
     font-size: 1em;
   }
   .nav__list {
-    width: 100vw;
-    padding: 0 20px;
+    width: 100%;
     justify-content: space-between;
   }
 }
