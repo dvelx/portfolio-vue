@@ -2,6 +2,7 @@
   <section class="about-me">
     <div class="container">
       <div class="about-me__container">
+        <div class="about-me__bg"></div>
         <h2 class="about-me__title">
           <span class="about-me-span">#</span>about-me
           <span class="about-me-divider"></span>
@@ -33,21 +34,21 @@
 
 .about-me {
   &__container {
-
+    z-index: 1;
     padding: 4em 0;
     position: relative;
   }
-  &__container::before {
+  &__bg::before {
     content: '';
     background-image: url("../assets/images/bg-about.svg");
     background-repeat: no-repeat;
     background-position: right;
     position: absolute;
-    right: 0;
-    top: -40px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    right: 10%;
+    top: 30%;
+    z-index: -1;
+    width: 60%;
+    height: 60%;
     opacity: 0.5;
     transform: rotate(20deg);
   }

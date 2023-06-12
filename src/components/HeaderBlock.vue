@@ -28,7 +28,7 @@
             </RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/about-me" class="nav__item-link">
+            <RouterLink to="/about-me/" class="nav__item-link">
               <span class="nav__item-span">#</span>
               <p class="nav__item-title">about-me</p>
             </RouterLink>
@@ -155,6 +155,7 @@
     }
   }
   .nav__mobile {
+    position: sticky;
     display: flex;
     height: 60px;
     padding-top: 10px;
@@ -189,11 +190,12 @@
   .nav__item-link {
     font-size: 1em;
   }
+  .nav__list {
+    width: 100vw;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
 }
-.nav__list {
-  width: 100vw;
-  padding: 0 20px;
-  justify-content: space-between;
-}
+
 
 </style>
