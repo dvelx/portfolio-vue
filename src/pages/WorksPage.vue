@@ -1,43 +1,41 @@
 <template>
-
-    <section class="works">
-      <div class="works__container container">
-        <h1 class="works__title">
-          <span class="works-span">#</span>works
-          <span class="works-divider"></span>
-        </h1>
-        <div class="works__grid">
-          <div v-for="work in works" :key="work.id" class="works__grid-item">
-            <h3 class="works__item-title">
-              {{ work.title }}
-            </h3>
-            <span class="works__item-divider"></span>
-            <a :href="work.github" class="works__item-link" target="_blank"></a>
-              <img class="works__item-img" :src="work.src" alt="moire">
-            <span class="works__item-divider"></span>
-            <p class="works__item-description">
-              {{ work.text }}
-            </p>
-            <span class="works__item-divider"></span>
-            <div class="works__item-bottom">
-              <a class="works__item-btn btn">GitHub</a>
-              <a v-if="work.ghPages" class="works__item-btn btn">GHPages</a>
-            </div>
+  <section class="works">
+    <div class="works__container container">
+      <h1 class="works__title">
+        <span class="works-span">#</span>works
+        <span class="works-divider"></span>
+      </h1>
+      <div class="works__grid">
+        <div v-for="work in works" :key="work.id" class="works__grid-item">
+          <h3 class="works__item-title">
+            {{ work.title }}
+          </h3>
+          <span class="works__item-divider"></span>
+          <a :href="work.github" class="works__item-link" target="_blank"></a>
+          <img class="works__item-img" :src="work.src" alt="moire" />
+          <span class="works__item-divider"></span>
+          <p class="works__item-description">
+            {{ work.text }}
+          </p>
+          <span class="works__item-divider"></span>
+          <div class="works__item-bottom">
+            <a :href="work.github" class="works__item-btn btn" target="_blank">GitHub</a>
+            <a v-if="work.ghPages" :href="work.ghPages" class="works__item-btn btn" target="_blank"
+              >GHPages</a
+            >
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-import moire from '../assets/images/moire.png'
-import works from "@/data/works";
+import works from '@/data/works'
 </script>
 
 <style scoped lang="scss">
-
-@import "../assets/styles/main";
+@import '../assets/styles/main';
 .works {
   &__container {
     padding: 4em 0;
@@ -64,9 +62,7 @@ import works from "@/data/works";
     gap: 2em;
     grid-template-columns: repeat(4, 1fr);
 
-
     &-item {
-
       position: relative;
       display: flex;
       flex-direction: column;
@@ -102,7 +98,7 @@ import works from "@/data/works";
     justify-content: space-around;
   }
   &__item-btn {
-    transition: background-color .3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
   }
   &__item-btn:hover {
     background-color: $bg_btn_hover;
@@ -111,7 +107,6 @@ import works from "@/data/works";
 
 @media (max-width: 991px) {
   .works {
-
     &__grid {
       grid-template-columns: repeat(2, 1fr);
       overflow-y: auto;
@@ -121,7 +116,6 @@ import works from "@/data/works";
 }
 @media (max-width: 768px) {
   .works {
-
     &__grid {
       grid-template-columns: repeat(1, 1fr);
     }

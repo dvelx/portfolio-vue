@@ -4,16 +4,15 @@ import email from '../assets/images/adaptive-mail.png'
 import crm from '../assets/images/crm-main.png'
 
 interface IWorks {
-  id: number,
-  src: string,
-  title: string,
-  text: string,
-  github: string,
+  id: number
+  src: string
+  title: string
+  text: string
+  github: string
   ghPages?: string
 }
 
-
-const works:IWorks[] = [
+const works: IWorks[] = [
   {
     id: 1,
     src: moire,
@@ -27,7 +26,7 @@ const works:IWorks[] = [
     src: portfolio,
     title: '@dvelx portfolio',
     text: 'Проект моего портфолио на Vue3 + Vite + TS',
-    github: 'https://github.com/dvelx/site-portfolio',
+    github: 'https://github.com/dvelx/portfolio-vue',
     ghPages: 'https://dvelx.github.io/portfolio-vue/'
   },
   {
@@ -45,9 +44,7 @@ const works:IWorks[] = [
     text: 'CRM система учета клиентов',
     github: 'https://github.com/dvelx/Mini-CRM',
     ghPages: ''
-  },
+  }
 ]
 
 export default works
-
-

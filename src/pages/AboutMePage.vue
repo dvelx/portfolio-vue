@@ -9,15 +9,13 @@
         </h2>
         <p class="about-me__description">Hello, I`m Andrei</p>
         <p class="about-me__description">
-          I`m front-end developer based in Nizhny Novgorod, Russia. I love
-          designing beautiful, modern and responsive websites and working on
-          modern user-friendly web interfaces.
+          I`m front-end developer based in Nizhny Novgorod, Russia. I love designing beautiful,
+          modern and responsive websites and working on modern user-friendly web interfaces.
         </p>
         <p class="about-me__description">
-          I have been developing in this direction for over a year. I write
-          beautiful and high-quality code that is understandable to other
-          developers. I am constantly developing and learning new
-          technologies and frameworks.
+          I have been developing in this direction for over a year. I write beautiful and
+          high-quality code that is understandable to other developers. I am constantly developing
+          and learning new technologies and frameworks.
         </p>
         <button class="about-me__btn btn">Read more -></button>
       </div>
@@ -25,12 +23,10 @@
   </section>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
-@import "../assets/styles/main";
+@import '../assets/styles/main';
 
 .about-me {
   &__container {
@@ -40,11 +36,11 @@
   }
   &__bg::before {
     content: '';
-    background-image: url("../assets/images/bg-about.svg");
+    background-image: url('../assets/images/bg-about.svg');
     background-repeat: no-repeat;
     background-position: right;
     position: absolute;
-    right: 10%;
+    margin-left: auto;
     top: 30%;
     z-index: -1;
     width: 60%;
@@ -74,11 +70,10 @@
     color: $gray;
   }
   &__btn {
-    transition: background-color .3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
   }
   &__btn:hover {
     background-color: $bg_btn_hover;
   }
 }
-
 </style>

@@ -23,8 +23,8 @@
           </li>
           <li class="nav__item">
             <RouterLink to="/works/" class="nav__item-link">
-                <span class="nav__item-span">#</span>
-                <p class="nav__item-title">works</p>
+              <span class="nav__item-span">#</span>
+              <p class="nav__item-title">works</p>
             </RouterLink>
           </li>
           <li class="nav__item">
@@ -44,24 +44,19 @@
       <nav class="nav__mobile">
         <ul class="nav__list">
           <li class="nav__item">
-            <RouterLink to="/skills/" class="nav__item-link skill-icon">
-            </RouterLink>
+            <RouterLink to="/skills/" class="nav__item-link skill-icon"> </RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/works/" class="nav__item-link works-icon">
-            </RouterLink>
+            <RouterLink to="/works/" class="nav__item-link works-icon"> </RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/" href="#" class="nav__item-link home-icon">
-            </RouterLink>
+            <RouterLink to="/" href="#" class="nav__item-link home-icon"> </RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/about-me" class="nav__item-link about-icon">
-            </RouterLink>
+            <RouterLink to="/about-me" class="nav__item-link about-icon"> </RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/contacts/" class="nav__item-link contact-icon">
-            </RouterLink>
+            <RouterLink to="/contacts/" class="nav__item-link contact-icon"> </RouterLink>
           </li>
         </ul>
       </nav>
@@ -69,13 +64,10 @@
   </header>
 </template>
 
-<script setup lang="ts">
-
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
-@import "../assets/styles/main";
+@import '../assets/styles/main';
 
 .header {
   width: 100vw;
@@ -93,11 +85,11 @@
   padding: 1.3em 0;
   font-size: 1em;
   font-weight: 800;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   &-span {
     color: $primary;
-    margin-right: .4em;
+    margin-right: 0.4em;
   }
 }
 .logo__link:hover {
@@ -115,7 +107,7 @@
 
   &-link {
     display: flex;
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
     min-width: calc(100% + 10px);
   }
   &-link:hover {
@@ -123,7 +115,7 @@
   }
   &-span {
     color: $primary;
-    margin-right: .3em;
+    margin-right: 0.3em;
   }
 }
 .nav__item:not(:last-child) {
@@ -158,6 +150,7 @@
   }
   .nav__mobile {
     position: fixed;
+    margin-top: -5px;
     padding: 10px 20px 10px 20px;
     display: flex;
     left: 0;
@@ -170,32 +163,32 @@
   }
   .home-icon {
     width: 30px;
-    background-image: url("../assets/images/noun-home-2472593.svg");
+    background-image: url('../assets/images/noun-home-2472593.svg');
     background-repeat: no-repeat;
     background-position: center;
   }
   .skill-icon {
     width: 30px;
     background-repeat: no-repeat;
-    background-image: url("../assets/images/noun-skill-5613365.svg");
+    background-image: url('../assets/images/noun-skill-5613365.svg');
     background-position: center;
   }
   .works-icon {
     width: 30px;
     background-repeat: no-repeat;
-    background-image: url("../assets/images/noun-rotation-works-2856402.svg");
+    background-image: url('../assets/images/noun-rotation-works-2856402.svg');
     background-position: center;
   }
   .about-icon {
     width: 30px;
     background-repeat: no-repeat;
-    background-image: url("../assets/images/noun-about-me-5241214.svg");
+    background-image: url('../assets/images/noun-about-me-5241214.svg');
     background-position: center;
   }
   .contact-icon {
     width: 30px;
     background-repeat: no-repeat;
-    background-image: url("../assets/images/noun-contacts-4195379.svg");
+    background-image: url('../assets/images/noun-contacts-4195379.svg');
     background-position: center;
   }
   .nav__item-link {
@@ -206,6 +199,4 @@
     justify-content: space-between;
   }
 }
-
-
 </style>

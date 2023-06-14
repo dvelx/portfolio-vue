@@ -3,20 +3,22 @@
 
   <RouterView class="router-view" v-slot="{ Component }">
     <Transition name="page-opacity" mode="out-in">
-      <component :is="Component"/>
+      <component :is="Component" />
     </Transition>
   </RouterView>
 
   <FooterBlock />
+  <div id="root-modal"></div>
 </template>
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import FooterBlock from "@/components/FooterBlock.vue";
-import HeaderBlock from "@/components/HeaderBlock.vue";
+import FooterBlock from '@/components/FooterBlock.vue'
+import HeaderBlock from '@/components/HeaderBlock.vue'
+
+
+
 </script>
-
-
 
 <style lang="scss">
 .router-view {

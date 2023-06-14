@@ -1,12 +1,17 @@
 <template>
   <BaseFormField :title="title" :error="error">
-    <textarea class="form__input form__input--area" v-model="dataValue" name="comments" :placeholder="placeholder"></textarea>
+    <textarea
+      class="form__input form__input--area"
+      v-model="dataValue"
+      name="comments"
+      :placeholder="placeholder"
+    ></textarea>
   </BaseFormField>
 </template>
 
 <script setup lang="ts">
-import {computed} from "vue";
-import BaseFormField from "@/components/BaseFormField.vue";
+import { computed } from 'vue'
+import BaseFormField from '@/components/BaseFormField.vue'
 
 const props = defineProps({
   title: String,
@@ -14,9 +19,7 @@ const props = defineProps({
   placeholder: String,
   value: String
 })
-const emits = defineEmits([
-  'input'
-])
+const emits = defineEmits(['input'])
 
 const dataValue = computed({
   get() {
@@ -26,22 +29,21 @@ const dataValue = computed({
     emits('input', value)
   }
 })
-
 </script>
 
 <style scoped lang="scss">
-@import "../../src/assets/styles/main";
+@import '../../src/assets/styles/main';
 .form__input {
   padding: 10px 45px 10px 20px;
   width: 100%;
   margin-bottom: 10px;
   border-radius: 1px;
   border: 1px solid $white;
-  background-color: rgba(40,44,51,.75);
+  background-color: rgba(40, 44, 51, 0.75);
   -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: $gray;
   font-size: 16px;
   font-family: inherit;
@@ -52,12 +54,13 @@ const dataValue = computed({
   color: $gray;
   padding-left: 5px;
 }
-.form__input:focus, .form__input:hover {
+.form__input:focus,
+.form__input:hover {
   outline: 0;
-  border-color: $primary
+  border-color: $primary;
 }
 .form__input--area {
   height: 140px;
-  resize: none
+  resize: none;
 }
 </style>

@@ -1,0 +1,25 @@
+@import "variables";
+@media (prefers-color-scheme: dark) {
+}
+  .dark {
+    background-color: $bg_color;
+    color: $white;
+  }
+  .dark .theme-toggle {
+    width: 100%;
+  }
+
+@media (prefers-color-scheme: light) {
+}
+  .light {
+    background-color: white;
+    color: #282c33;
+  }
+  .light .menu-settings {
+    background-color: black;
+  }
+  .light .btn{
+    color: #282c33;
+  }
+
+

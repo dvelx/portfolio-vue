@@ -10,6 +10,11 @@
     <meta name="application-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>dvelx</title>
+
+      <script>
+          const theme = localStorage.getItem('user-theme')
+          document.documentElement.className = theme
+      </script>
   </head>
   <body>
     <div id="app"></div>

@@ -1,13 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import { ROUTES_PATHS } from '@/constans/router'
-import Home from "@/pages/HomePage.vue";
-import Works from "@/pages/WorksPage.vue";
-import AboutMePage from "@/pages/AboutMePage.vue";
-import SkillsPage from "@/pages/SkillsPage.vue";
-import ContactsPage from "@/pages/ContactsPage.vue";
+import Home from '@/pages/HomePage.vue'
+import Works from '@/pages/WorksPage.vue'
+import AboutMePage from '@/pages/AboutMePage.vue'
+import SkillsPage from '@/pages/SkillsPage.vue'
+import ContactsPage from '@/pages/ContactsPage.vue'
+import DonatePage from '@/pages/DonatePage.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: ROUTES_PATHS.HOME,
@@ -33,6 +34,11 @@ const router = createRouter({
       path: ROUTES_PATHS.CONTACTS,
       name: ROUTES_PATHS.CONTACTS,
       component: ContactsPage
+    },
+    {
+      path: ROUTES_PATHS.DONATE,
+      name: ROUTES_PATHS.DONATE,
+      component: DonatePage
     }
   ]
 })

@@ -7,7 +7,7 @@
           <span class="skills-divider"></span>
         </h2>
         <div class="skills__grid">
-          <div  v-for="skill in skills" :key="skill.id" class="skills__item">
+          <div v-for="skill in skills" :key="skill.id" class="skills__item">
             <h3 class="skills__item-title">{{ skill.title }}</h3>
             <span class="skills__item-divider"></span>
             <p class="skills__item-description">{{ skill.skillName }}</p>
@@ -19,12 +19,11 @@
 </template>
 
 <script setup lang="ts">
-import skills from "@/data/skills";
-
+import skills from '@/data/skills'
 </script>
 
 <style scoped lang="scss">
-@import "../assets/styles/main";
+@import '../assets/styles/main';
 
 .skills {
   &__container {
@@ -73,7 +72,6 @@ import skills from "@/data/skills";
 }
 @media (max-width: 991px) {
   .skills {
-
     &__grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -81,7 +79,6 @@ import skills from "@/data/skills";
 }
 @media (max-width: 768px) {
   .skills {
-
     &__grid {
       grid-template-columns: repeat(1, 1fr);
     }

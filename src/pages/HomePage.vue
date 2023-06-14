@@ -13,30 +13,27 @@
               He crafts responsive websites where technologies meet creativity
             </p>
             <button class="hero__left-btn btn" @click.prevent="openBtn">Contact me !!</button>
-            <BaseModal v-model:open="open">
+            <BaseModal v-model:open="open" name-event="home-page">
               <form action="#" method="post" class="modal__form">
                 <BaseFormText title="Name" placeholder="You name" />
                 <BaseFormText title="Email" placeholder="You email" />
                 <BaseFormTextarea title="Enter you message" placeholder="Enter you message" />
-                <button class="modal-btn btn">Send</button>
+                <button class="modal-btn btn adaptive">Send</button>
               </form>
             </BaseModal>
-            <div id="contact-modal"></div>
           </div>
           <div class="hero__right"></div>
         </div>
       </div>
     </section>
   </main>
-
 </template>
 
 <script setup lang="ts">
-
-import BaseModal from "@/components/BaseModal.vue";
-import { ref} from "vue";
-import BaseFormText from "@/components/BaseFormText.vue";
-import BaseFormTextarea from "@/components/BaseFormTextarea.vue";
+import BaseModal from '@/components/BaseModal.vue'
+import { ref } from 'vue'
+import BaseFormText from '@/components/BaseFormText.vue'
+import BaseFormTextarea from '@/components/BaseFormTextarea.vue'
 
 const open = ref(false)
 
@@ -45,19 +42,18 @@ const openBtn = () => {
 }
 </script>
 
-<style scoped lang="scss">
-@import "../assets/styles/main";
+<style lang="scss">
+@import '../assets/styles/main';
 .logo {
   position: absolute;
   max-height: 470px;
-  color: #C778DD;
+  color: #c778dd;
   right: 50px;
   transform: rotate(30deg);
 }
 .modal__form {
   position: relative;
 }
-
 
 .hero {
   &__container {
@@ -73,7 +69,7 @@ const openBtn = () => {
       margin-bottom: 2em;
     }
     &-span {
-      color: $primary
+      color: $primary;
     }
     &-description {
       color: $gray;
@@ -81,9 +77,9 @@ const openBtn = () => {
       margin-bottom: 2em;
     }
     &-btn.btn {
-      padding: .5em 1em;
+      padding: 0.5em 1em;
       font-size: 2em;
-      transition: background-color .3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
     }
     &-btn:hover {
       background-color: $bg_btn_hover;
@@ -96,7 +92,7 @@ const openBtn = () => {
   }
   &__right::before {
     content: '';
-    background-image: url("../assets/images/logo.svg");
+    background-image: url('../assets/images/logo.svg');
     background-repeat: no-repeat;
     background-position: right;
     position: absolute;
@@ -106,18 +102,17 @@ const openBtn = () => {
     height: 100%;
     z-index: 1;
     opacity: 0.5;
-    transform: rotate(-20deg)
+    transform: rotate(-20deg);
   }
 }
 .modal-btn {
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 .modal-btn:hover {
   background-color: $bg_btn_hover;
 }
 @media (max-width: 991px) {
   .hero {
-
     &__left {
       width: 100%;
       display: flex;
@@ -134,8 +129,6 @@ const openBtn = () => {
 }
 @media (max-width: 768px) {
   .hero {
-
-
     &__left-title {
       font-size: 1.5em;
     }

@@ -1,7 +1,6 @@
 <template>
   <label class="form__label">
-
-    <slot/>
+    <slot />
     <span class="form__error" v-if="error">{{ error }}</span>
   </label>
 </template>
@@ -10,7 +9,7 @@
 defineProps({
   title: String,
   error: String
-});
+})
 </script>
 
 <style scoped lang="scss">
@@ -21,6 +20,6 @@ defineProps({
   font-size: 12px;
   line-height: 1;
   color: #737373;
-  font-weight: 300
+  font-weight: 300;
 }
 </style>
