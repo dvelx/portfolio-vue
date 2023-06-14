@@ -1,25 +1,30 @@
-@import "variables";
+@import 'variables';
 @media (prefers-color-scheme: dark) {
 }
-  .dark {
-    background-color: $bg_color;
-    color: $white;
-  }
-  .dark .theme-toggle {
-    width: 100%;
-  }
+.dark {
+  background-color: $bg_color;
+  color: $white;
+}
+.dark .theme-toggle {
+  width: 100%;
+}
+.dark .nav__mobile {
+  background-color: rgba(27, 30, 36, 1);
+  border-bottom: 1px solid gray;
+}
 
 @media (prefers-color-scheme: light) {
 }
-  .light {
-    background-color: white;
-    color: #282c33;
-  }
-  .light .menu-settings {
-    background-color: black;
-  }
-  .light .btn{
-    color: #282c33;
-  }
-
-
+.light {
+  background-color: white;
+  color: #282c33;
+}
+.light .menu-settings {
+  background-color: black;
+}
+.light .btn {
+  color: #282c33;
+}
+.light .nav__mobile {
+  background-color: $white;
+}

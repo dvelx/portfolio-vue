@@ -74,7 +74,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import MenuSettings from '@/components/MenuSettings.vue'
-import BaseModal from "@/components/BaseModal.vue";
+import BaseModal from '@/components/BaseModal.vue'
 
 const isMenuSettingOpen = ref(false)
 

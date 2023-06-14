@@ -1,17 +1,17 @@
 <template>
-    <Teleport v-if="open" to="#root-modal" class="modal">
-      <div :class="getClassName + '__overlay'"></div>
-      <div :class="getClassName + '__contact'" @click="onOutsideClick">
-        <div ref="content" :class="getClassName + '__content'">
-          <button :class="getClassName + '__close'" @click="doClose">X</button>
-          <slot></slot>
-        </div>
+  <Teleport v-if="open" to="#root-modal" class="modal">
+    <div :class="getClassName + '__overlay'"></div>
+    <div :class="getClassName + '__contact'" @click="onOutsideClick">
+      <div ref="content" :class="getClassName + '__content'">
+        <button :class="getClassName + '__close'" @click="doClose">X</button>
+        <slot></slot>
       </div>
-    </Teleport>
+    </div>
+  </Teleport>
 </template>
 
 <script setup lang="ts">
-import {computed, ref} from 'vue'
+import { computed, ref } from 'vue'
 const props = defineProps({
   open: {
     type: Boolean,
@@ -107,7 +107,6 @@ const getClassName = computed(() => {
   }
 }
 
-
 //HOME PAGE MODAL STYLE
 .home-page {
   &__overlay {
@@ -139,7 +138,6 @@ const getClassName = computed(() => {
     padding: 50px;
     color: $white;
     border: 1px solid $gray;
-    border-bottom: none;
     background-color: rgba(40, 44, 51, 0.9);
   }
   &__close {

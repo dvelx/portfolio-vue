@@ -1,14 +1,21 @@
 <template>
-    <div class="theme-toggle">
-      <span class="theme-span">Dark mode</span>
-      <input class="theme-checkbox" type="checkbox" id="switch" :checked="current" :value="current" @click="toggle"/>
-      <label class="theme-checkbox-label" for="switch">Toggle</label>
-    </div>
+  <div class="theme-toggle">
+    <span class="theme-span">Dark mode</span>
+    <input
+      class="theme-checkbox"
+      type="checkbox"
+      id="switch"
+      :checked="current"
+      :value="current"
+      @click="toggle"
+    />
+    <label class="theme-checkbox-label" for="switch">Toggle</label>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { themeStore } from '@/stores/themeStore'
-import {ref} from "vue";
+import { ref } from 'vue'
 
 const store = themeStore()
 const current = ref(store.state.checked)
@@ -19,7 +26,7 @@ const toggle = () => {
     console.log('worked dark')
     store.$patch({
       state: {
-        theme:  'dark',
+        theme: 'dark',
         checked: current.value
       }
     })
@@ -30,7 +37,7 @@ const toggle = () => {
     console.log('worked light')
     store.$patch({
       state: {
-        theme:  'light',
+        theme: 'light',
         checked: current.value
       }
     })
@@ -38,7 +45,6 @@ const toggle = () => {
     document.documentElement.className = store.state.theme
   }
 }
-
 </script>
 
 <style lang="scss">
