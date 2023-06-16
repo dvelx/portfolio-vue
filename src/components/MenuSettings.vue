@@ -5,8 +5,8 @@
       class="theme-checkbox"
       type="checkbox"
       id="switch"
-      :checked="current"
-      :value="current"
+      :checked="isChangeScheme"
+      :value="isChangeScheme"
       @click="toggle"
     />
     <label class="theme-checkbox-label" for="switch">Toggle</label>
@@ -14,36 +14,19 @@
 </template>
 
 <script setup lang="ts">
-import { themeStore } from '@/stores/themeStore'
+import { schemeStore } from '@/stores/schemeStore'
 import { ref } from 'vue'
 
-const store = themeStore()
-const current = ref(store.state.checked)
+const store = schemeStore()
+
+const isChangeScheme = ref(store.state.checked)
 
 const toggle = () => {
-  current.value = !current.value
-  if (current.value) {
-    console.log('worked dark')
-    store.$patch({
-      state: {
-        theme: 'dark',
-        checked: current.value
-      }
-    })
-    localStorage.setItem('user-theme', 'dark')
-    document.documentElement.className = store.state.theme
-  }
-  if (!current.value) {
-    console.log('worked light')
-    store.$patch({
-      state: {
-        theme: 'light',
-        checked: current.value
-      }
-    })
-    localStorage.setItem('user-theme', 'light')
-    document.documentElement.className = store.state.theme
-  }
+  isChangeScheme.value = !isChangeScheme.value
+  const newColorScheme = isChangeScheme.value ? 'dark' : 'light'
+  store.changeScheme(newColorScheme, isChangeScheme.value, true)
+  localStorage.setItem('user-scheme', newColorScheme)
+  document.documentElement.className = newColorScheme
 }
 </script>
 

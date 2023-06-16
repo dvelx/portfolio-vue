@@ -1,6 +1,15 @@
 @import 'variables';
 @import 'fonts';
 
+:root {
+  --bg_color: white;
+  --color-def: black;
+}
+.dark {
+  --bg_color: #282c33;
+  --color-def: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +25,7 @@ html {
   height: 100%;
 }
 body {
+  background-color: var(--bg_color);
   fill: currentColor;
 }
 #app {
@@ -79,20 +89,39 @@ button {
 .btn {
   padding: 0.5em 1em;
   border: 1px solid $primary;
-  color: $white;
+  color: var(--color-def);
   font-family: $font-family;
 }
-
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .container {
-    max-width: 991px;
+    max-width: 990px;
+  }
+  body {
+    max-height: 100vh;
+  }
+  .nav__item-link {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 766px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 574px;
   }
   body {
     max-height: 100vh;
   }
 }
-@media (max-width: 767px) {
+
+@media (max-width: 320px) {
   .container {
-    max-width: 766px;
+    max-width: 318px;
+  }
+  body {
+    max-height: 100vh;
   }
 }

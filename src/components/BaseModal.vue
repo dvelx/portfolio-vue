@@ -107,7 +107,7 @@ const getClassName = computed(() => {
   }
 }
 
-//HOME PAGE MODAL STYLE
+//HOME PAGE MODAL FORM STYLE
 .home-page {
   &__overlay {
     z-index: 1010;

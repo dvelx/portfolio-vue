@@ -15,6 +15,20 @@
 import { RouterView } from 'vue-router'
 import FooterBlock from '@/components/FooterBlock.vue'
 import HeaderBlock from '@/components/HeaderBlock.vue'
+import { schemeStore } from '@/stores/schemeStore'
+const store = schemeStore()
+console.log()
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  const newColorScheme = e.matches ? 'dark' : 'light'
+  if (!store.state.autoChangeScheme) {
+    console.log(newColorScheme === 'dark')
+    store.changeScheme(newColorScheme, newColorScheme === 'dark')
+    localStorage.setItem('user-scheme', newColorScheme)
+    document.documentElement.className = newColorScheme
+  }
+})
+document.documentElement.className = store.getScheme
 </script>
 
 <style lang="scss">

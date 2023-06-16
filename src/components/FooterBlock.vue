@@ -93,7 +93,19 @@ const currentDate = computed(() => {
 
 .footer {
   &__mobile {
-    display: none;
+    overflow: hidden;
+
+
+    .mobile-setting {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      background-image: url('../assets/images/SVG/noun-settings-5786494.svg');
+      background-repeat: no-repeat;
+    }
   }
   width: 100vw;
   padding: 2em 10px 0 10px;
@@ -153,6 +165,11 @@ const currentDate = computed(() => {
     display: flex;
     width: 100%;
 
+    .mobile-setting {
+      display: block;
+      position: initial;
+    }
+
     &-wrapper {
       display: flex;
       width: 100%;
@@ -160,13 +177,6 @@ const currentDate = computed(() => {
       justify-content: space-between;
       align-items: center;
     }
-  }
-  .mobile-setting {
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-image: url('../assets/images/SVG/noun-settings-5786494.svg');
-    background-repeat: no-repeat;
   }
   .mobile-github {
     display: block;

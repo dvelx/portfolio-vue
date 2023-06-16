@@ -223,6 +223,7 @@
 }
 .nav__list {
   display: flex;
+  padding-right: 60px;
 }
 .nav__item {
   display: flex;
@@ -286,6 +287,9 @@
     flex-direction: row;
     background-color: rgba(27, 30, 36, 1);
     border-bottom: 1px solid rgba(27, 30, 36, 0.3);
+  }
+  .nav__list {
+    padding-right: 0;
   }
 
   .about-icon svg,

@@ -1,30 +1,58 @@
 @import 'variables';
 @media (prefers-color-scheme: dark) {
 }
+
 .dark {
   background-color: $bg_color;
   color: $white;
-}
-.dark .theme-toggle {
-  width: 100%;
-}
-.dark .nav__mobile {
-  background-color: rgba(27, 30, 36, 1);
-  border-bottom: 1px solid gray;
+
+  .btn {
+    color: $white;
+  }
+  .theme-toggle {
+    width: 100%;
+  }
+  .nav__mobile {
+    background-color: rgba(27, 30, 36, 1);
+    border-bottom: 1px solid gray;
+  }
 }
 
 @media (prefers-color-scheme: light) {
 }
+
 .light {
-  background-color: white;
-  color: #282c33;
-}
-.light .menu-settings {
-  background-color: black;
-}
-.light .btn {
-  color: #282c33;
-}
-.light .nav__mobile {
-  background-color: $white;
+  .hero__left-title {
+    color: black;
+  }
+  .menu-settings {
+    background-color: black;
+  }
+  .btn {
+    color: #282c33;
+  }
+  .nav__item-title,
+  .logo__link-title,
+  .skills__title,
+  .skills__item-title,
+  .works__title,
+  .works__item-title,
+  .works__item-description,
+  .about-me__title,
+  .contacts__title,
+  .contacts__right-title,
+  .footer__left-text,
+  .footer__right-title {
+    color: black;
+  }
+  .nav__mobile {
+    background-color: $white;
+  }
+  .about-icon svg path,
+  .works-icon svg path,
+  .skill-icon svg path,
+  .home-icon svg path,
+  .contact-icon svg path {
+    fill: black;
+  }
 }
