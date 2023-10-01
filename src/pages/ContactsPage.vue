@@ -3,18 +3,18 @@
     <div class="container">
       <div class="contacts__container">
         <h2 class="contacts__title">
-          <span class="contacts-span">#</span>contacts
+          <span class="contacts-span">#</span>контакты
           <span class="contacts-divider"></span>
         </h2>
         <div class="contacts__wrapper">
           <div class="contacts__left">
             <p class="contacts__left-description">
-              I am interested in working on modern, cool projects. If you have questions or
-              suggestions for me, feel free to contact me.
+              Мне интересно работать над современными, крутыми проектами. Если у вас есть вопросы или
+              предложения для меня, не стесняйтесь обращаться ко мне.
             </p>
           </div>
           <div class="contacts__right">
-            <h3 class="contacts__right-title">Message me here</h3>
+            <h3 class="contacts__right-title">Написать мне</h3>
             <div class="contacts__right-mail">
               <a href="mailto:a.opk152@yandex.ru" class="mail-link contacts__right-link">
                 <svg

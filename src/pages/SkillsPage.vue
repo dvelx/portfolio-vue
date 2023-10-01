@@ -3,7 +3,7 @@
     <div class="container">
       <div class="skills__container">
         <h2 class="skills__title">
-          <span class="skills-span">#</span>skills
+          <span class="skills-span">#</span>навыки
           <span class="skills-divider"></span>
         </h2>
         <div class="skills__grid">

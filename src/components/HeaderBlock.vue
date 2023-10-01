@@ -12,31 +12,31 @@
           <li class="nav__item">
             <RouterLink to="/" href="#" class="nav__item-link">
               <span class="nav__item-span">#</span>
-              <p class="nav__item-title">home</p>
+              <p class="nav__item-title">главная</p>
             </RouterLink>
           </li>
           <li class="nav__item">
             <RouterLink to="/skills/" class="nav__item-link">
               <span class="nav__item-span">#</span>
-              <p class="nav__item-title">skills</p>
+              <p class="nav__item-title">навыки</p>
             </RouterLink>
           </li>
           <li class="nav__item">
             <RouterLink to="/works/" class="nav__item-link">
               <span class="nav__item-span">#</span>
-              <p class="nav__item-title">works</p>
+              <p class="nav__item-title">мои работы</p>
             </RouterLink>
           </li>
           <li class="nav__item">
             <RouterLink to="/about-me/" class="nav__item-link">
               <span class="nav__item-span">#</span>
-              <p class="nav__item-title">about-me</p>
+              <p class="nav__item-title">обо мне</p>
             </RouterLink>
           </li>
           <li class="nav__item">
             <RouterLink to="/contacts/" class="nav__item-link">
               <span class="nav__item-span">#</span>
-              <p class="nav__item-title">contacts</p>
+              <p class="nav__item-title">контакты</p>
             </RouterLink>
           </li>
         </ul>
@@ -195,8 +195,12 @@
 <style lang="scss">
 @import '../assets/styles/main';
 
+.nav__item-link.router-link-active {
+  color: $primary;
+}
+
 .header {
-  width: 100vw;
+  width: calc(100vw - 40px);
   padding: 10px 10px 0 10px;
   &__container {
     display: flex;

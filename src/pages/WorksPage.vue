@@ -2,7 +2,7 @@
   <section class="works">
     <div class="works__container container">
       <h1 class="works__title">
-        <span class="works-span">#</span>works
+        <span class="works-span">#</span>мои работы
         <span class="works-divider"></span>
       </h1>
       <div class="works__grid">

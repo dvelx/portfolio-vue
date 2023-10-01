@@ -7,7 +7,7 @@ export default [
   {
     id: 2,
     title: 'Tools',
-    skillName: 'VSCode Linux Windows Figma Git WebStorm Webpack'
+    skillName: 'VSCode Linux Windows Figma Git WebStorm Webpack Vite'
   },
   {
     id: 3,
@@ -17,6 +17,6 @@ export default [
   {
     id: 4,
     title: 'Frameworks',
-    skillName: 'Vue.js'
+    skillName: 'Vue.js 2,3'
   }
 ]

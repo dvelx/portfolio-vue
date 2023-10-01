@@ -4,18 +4,18 @@
       <div class="about-me__container">
         <div class="about-me__bg"></div>
         <h2 class="about-me__title">
-          <span class="about-me-span">#</span>about-me
+          <span class="about-me-span">#</span>обо мне
           <span class="about-me-divider"></span>
         </h2>
-        <p class="about-me__description">Hello, I`m Andrei</p>
+        <p class="about-me__description">Привет! Меня зовут Андрей</p>
         <p class="about-me__description">
-          I`m front-end developer based in Nizhny Novgorod, Russia. I love designing beautiful,
-          modern and responsive websites and working on modern user-friendly web interfaces.
+          Я фронтенд-разработчик из Нижнего Новгорода, Россия. Я люблю создавать красивые,
+          современные и адаптивные веб-сайты и работать над современными удобными веб-интерфейсами.
         </p>
         <p class="about-me__description">
-          I have been developing in this direction for over a year. I write beautiful and
-          high-quality code that is understandable to other developers. I am constantly developing
-          and learning new technologies and frameworks.
+          Развиваюсь в этом направлении больше года. Я пишу красивый и
+          качественный код, понятный другим разработчикам. Я постоянно развиваюсь
+          в изучении новых технологий и фреймворков.
         </p>
         <button class="about-me__btn btn">Read more -></button>
       </div>

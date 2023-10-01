@@ -5,12 +5,12 @@
         <div class="hero__container">
           <div class="hero__left">
             <h1 class="hero__left-title">
-              Hello! My name is
-              <span class="hero__left-span">Andrei</span> and I`m a
-              <span class="hero__left-span">front-end developer</span>
+              Привет! Меня зовут
+              <span class="hero__left-span">Андрей</span> и я
+              <span class="hero__left-span">front-end разработчик</span>
             </h1>
             <p class="hero__left-description">
-              He crafts responsive websites where technologies meet creativity
+              Я создаю адаптивные веб-сайты, где технологии сочетаются с творчеством.
             </p>
             <button class="hero__left-btn btn" @click.prevent="openBtn">Contact me !!</button>
             <BaseModal v-model:open="open" name-event="home-page">

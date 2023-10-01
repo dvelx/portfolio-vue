@@ -92,6 +92,9 @@ const currentDate = computed(() => {
 @import '../assets/styles/main';
 
 .footer {
+  padding: 2em 10px 0 10px;
+  border-top: 1px solid $gray;
+
   &__mobile {
     overflow: hidden;
 
@@ -107,9 +110,7 @@ const currentDate = computed(() => {
       background-repeat: no-repeat;
     }
   }
-  width: 100vw;
-  padding: 2em 10px 0 10px;
-  border-top: 1px solid $gray;
+
   &__wrapper {
     display: flex;
     flex-direction: row;
@@ -151,10 +152,10 @@ const currentDate = computed(() => {
     position: fixed;
     padding: 10px 40px 10px 40px;
     z-index: 10;
+    width: 100vw;
     display: flex;
     left: 0;
     bottom: 0;
-    width: 100vw;
     background-color: $bg_color;
     flex-direction: row;
   }
