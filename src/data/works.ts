@@ -6,6 +6,7 @@ import aromeshop from '../assets/images/aromashop.png'
 import cocktail from '../assets/images/cocktail.png'
 import qtimTesting from '../assets/images/testingQTIM.png'
 import rltTesting from  '../assets/images/testingRLT.png'
+import swcTesting from  '../assets/images/swc-testing.png'
 
 interface IWorks {
   id: number
@@ -80,6 +81,14 @@ const works: IWorks[] = [
     text: 'Список постов с fakeAPI, технология Nuxt 3',
     github: 'https://github.com/dvelx/testQTIM',
     ghPages: ''
+  },
+  {
+    id: 9,
+    src: swcTesting,
+    title: 'Тестовое задание компании SWC',
+    text: 'Dashboard по поиску автомобилей, Vue3 + TS, RestAPI',
+    github: 'https://github.com/dvelx/SWC-testing',
+    ghPages: 'https://dvelx.github.io/SWC-testing/'
   }
 ]
 
